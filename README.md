@@ -102,6 +102,38 @@ beer-protein-calc/
 └── vite.config.ts       # Vite configuration
 ```
 
+## Deployment
+
+### GitHub Pages (Automatic)
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+1. **Enable GitHub Pages in your repository:**
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+
+2. **Update the base path** (if your repository name is different):
+   - Edit `vite.config.ts` and change `/beer-protein-calc/` to match your repository name
+   - For example, if your repo is `my-beer-calc`, change it to `/my-beer-calc/`
+
+3. **Push to main branch:**
+   - The GitHub Action will automatically build and deploy your site
+   - Your site will be available at `https://<username>.github.io/beer-protein-calc/`
+
+### Manual Deployment
+
+If you prefer to deploy manually:
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. The `dist` folder contains the production-ready files. You can deploy this folder to any static hosting service.
+
+**Note:** If deploying to a custom domain or different path, update the `base` property in `vite.config.ts` accordingly.
+
 ## Contributing
 
 Contributions are welcome! Feel free to open an issue or submit a pull request.
